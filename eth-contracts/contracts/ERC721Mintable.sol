@@ -26,7 +26,7 @@ contract Ownable {
 
     modifier isRealAddress(address _address) 
     {
-        require(_address != address(0), 'Owner is not a real address.');
+        require(_address == address(_address), 'Owner is not a real address.');
         _;
     }
 
