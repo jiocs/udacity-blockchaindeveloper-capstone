@@ -1,5 +1,10 @@
 pragma solidity >=0.4.21 <0.6.0;
 
+/* Added this line to prevent errors like the one below:
+    CompileError: project:/contracts/verifier.sol:188:13: TypeError: This type is only supported in the new experimental ABI encoder. Use "pragma experimental ABIEncoderV2;" to enable the feature.
+    */
+pragma experimental ABIEncoderV2;
+
 // TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>
 import "./verifier.sol";
 import "./ERC721Mintable.sol";
@@ -19,8 +24,8 @@ contract SolnSquareVerifier is CustomERC721Token
     }
 
     struct Solution {
-        Verifier.proof proof; // We need a property of the type Verifier.Proof to pass later to the method verifyTx
-        uint[2] input; // We will also need to pass the input parameter to the verifyTx method
+        Verifier.Proof proof; // We need a property of the type Verifier.Proof to pass later to the method verifyTx
+        uint[1] input; // We will also need to pass the input parameter to the verifyTx method
     }
 
     // TODO define a solutions struct that can hold an index & an address
@@ -40,18 +45,18 @@ contract SolnSquareVerifier is CustomERC721Token
     event SolutionAdded();
 
     // TODO Create a function to add the solutions to the array and emit the event
-    function addSolution(Verifier.Proof memory proof, uint[] memory input) public 
+    function addSolution(Verifier.Proof memory proof, uint[1] memory input) public 
     {
         uint256 a = 1;
         solns.add(a);
 
         
 
-        Solutions memory soln = new Solution {
-            proof: proof,
-            index: solns,
-            senderAddress: msg.sender
-        };
+        Solutions memory soln = Solutions(
+            Solution(proof, input),
+            solns,
+            msg.sender
+        );
 
         solutionsArray.push(soln);
 
