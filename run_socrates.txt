@@ -1,0 +1,49 @@
+set PATH=$PATH/c/Users/Jio/.zokrates/bin
+set PATH=$PATH;C:\UsersJio\.zokrates\bin
+
+
+
+$Env:PATH += ";C:\Users\Jio\.zokrates\bin"
+
+
+
+
+
+1. Start Docker daemon
+2. docker run -v C:\Users\Jio\Documents\dev\BlockchainDeveloperNanodegree\udacity-blockchaindeveloper-capstone\zokrates\code\:/home/zokrates/code -ti zokrates/zokrates /bin/bash
+3. cd /code/square
+4. zokrates compile --input ./square.code
+
+
+
+https://zokrates.github.io/gettingstarted.html
+
+
+# compile
+zokrates compile -i root.zok
+
+# perform the setup phase
+zokrates setup
+
+# execute the program
+zokrates compute-witness -a 337 113569
+
+# generate a proof of computation
+zokrates generate-proof
+
+# export a solidity verifier
+zokrates export-verifier
+
+# or verify natively
+zokrates verify
+
+
+
+
+Truffle v5.5.24 (core: 5.5.24)
+Ganache v7.4.0
+Solidity v0.5.16 (solc-js)
+Node v16.15.1
+Web3.js v1.7.4
+
+
