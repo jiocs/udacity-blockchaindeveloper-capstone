@@ -1,3 +1,6 @@
+// From rubric: 
+// Student completes the boilerplate ERC721 Mintable Contract in ERC721Mintable.sol
+
 pragma solidity ^0.5.5;
 
 import 'openzeppelin-solidity/contracts/utils/Address.sol';
@@ -48,6 +51,15 @@ contract Ownable {
     returns (bool)
     {
         return _owner == owner;
+    }
+
+    // Implement a function to return the contract owner
+    function contractOwner()
+    public
+    view
+    returns(address)
+    {
+        return _owner;
     }
 
 }
