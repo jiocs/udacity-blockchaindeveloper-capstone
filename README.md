@@ -1,2 +1,11 @@
 # udacity-blockchaindeveloper-capstone
-Udacity blockchain developer nanodegree capstone project
+# Udacity blockchain developer nanodegree capstone project
+
+# Rinkeby addresses: 
+
+Account: 0xf3E3Cf87CC0b3b00073Beb369706969C81A4E8a6
+Migrations: 0x38FE89f950f888E1fd0081ea950fDB908F9F2E91
+SolnSquareVerifier:  0x00462873f5eD6bE57ee6E1C0E9e6aaA42Ba5fFb2
+CustomERC721Token: 0xBcd94CA5e3a68A084dbF9591FBBB801DdA82d47A
+Verifier: 0xC550C29D32742B530B4fAabA4f4f7f2603fBEC67
+
