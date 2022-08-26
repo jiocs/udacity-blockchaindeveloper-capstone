@@ -44,7 +44,44 @@ contract('SolnSquareVerifier', accounts => {
         
         assert.equal(eventEmitted, true, "SolutionAdded event NOT emitted");
     });
+
+     // Test if an ERC721 token can be minted for contract - SolnSquareVerifier
+    it('Test if an ERC721 token can be minted for contract - SolnSquareVerifier', async function() {
+        let tokenId = 2000;
+        let owner = accounts[1];
+        let eventEmitted = false;
+
+        // Watch the Transfer event
+        // this.contract.Transfer({}, function(err, res) {
+        //     eventEmitted = true;
+        // });
+        this.contract.Transfer({}, function (err, res) {
+            console.log(err);
+            console.log(res);
+
+            eventEmitted = true;
+        });
+
+         // Read the proof created with zokrates (copied to this scoped environment)
+         let _proof = await JSON.parse(fs.readFileSync(".\\test\\proof.json"));
+
+         // Prepare the proof argument to match the Struct defined in verifier.sol:
+         let proof = {
+             a: _proof.proof.a,
+             b: _proof.proof.b,
+             c: _proof.proof.c
+         };
+
+         // Add the solution
+         await this.contract.addSolution(proof, _proof.inputs, {from:owner});
+
+         try {
+            // Mint token
+            let result = await this.contract.mint(owner, tokenId);
+         } catch (error) {
+            console.log(error);
+         }
+
+        assert.equal(eventEmitted, true, 'Token NOT minted');
+    });
 });
-
-
-// Test if an ERC721 token can be minted for contract - SolnSquareVerifier
