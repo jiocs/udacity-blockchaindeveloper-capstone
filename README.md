@@ -48,5 +48,17 @@ Minted property. Transaction: 0xae47f905daf05bc410eef55adc15d0eb0eabe6304b53d9cf
 Minted property. Transaction: 0x415c2888d4674c6ac307d510f85fc614591a490dea359162017308b091b81b7b
 
 
+# 5 items from the OpenSea collection were listed and purchased with the account: 
+
+0x856E9fe6cB3D60304bD1947D9EbAB32c1994172a
+
+# Transactions:
+
+0xe93ba27b5e098f6e6df35635b3db3f123fb01eba15e80526a6f18177ca4cfd63
+0x44df46e5019d39f71e8dbc5ca4f0bb46981b417bd166d0a922972bf2564defc5
+0xa8068ab87a7689049f508d211ef500e1b09d615cdfa6e4aae6367c6551193c63
+0x99c02beda6d7794cd52ec1aa61ed00175e795a2294af29f04de123123d3a5b85
+0xf524faf8593f82dbbbe797de60f41685c577351b86506bc3b3d7fe025482e8f8
+
 
 
