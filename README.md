@@ -1,5 +1,16 @@
-# udacity-blockchaindeveloper-capstone
 # Udacity blockchain developer nanodegree capstone project
+
+# How to run the tests:
+
+To test the code run the command   truffle test
+
+Considerations: 
+a) truffle config is set to lookup for Ganache or Truffle development environment at http://127.0.0.1:7545
+
+b) The truffle tests files are located under the \test folder
+
+# Contracts ABI's
+The contracts ABI's are located at the \eth-contracts\build\contracts folder
 
 # Rinkeby addresses: 
 
