@@ -5,6 +5,7 @@
 To test the code run the command   truffle test
 
 Considerations: 
+
 a) truffle config is set to lookup for Ganache or Truffle development environment at http://127.0.0.1:7545
 
 b) The truffle tests files are located under the \test folder
